@@ -5,9 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
-    <script src="script.js"></script>
+    <script src="script.js" async></script>
 </head>
 <body>
-    
+    <h1>Rock Paper Scissors Game!</h1>
+    <p>Play Rock Paper Scissors with a computer for 5 rounds!</p>
+    <button onclick="startGame()" class="startGame">Start Game</button>
+
+    <div id="form">
+        <label for="userGame">Rock, Paper, Scissors</label>
+        <input type="text" id="userGame" class="userGame">
+        <input type="submit" value="Play" class="submitGame">
+    </div>
+
+    <div class="gameResult">
+        <p class="playerSelect"></p>
+        <p class="computerSelect"></p>
+        <p class="gameRound"></p>
+    </div>
 </body>
 </html>
