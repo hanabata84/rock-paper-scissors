@@ -1,5 +1,17 @@
-const playerSelection = prompt('rock, paper, scissors');
-const computerSelection = computerPlay();
+function game() {
+    let gameCount = 5;
+    for(let i = 1; i <= gameCount; i++){
+        const playerSelection = prompt('rock, paper, scissors');
+        const computerSelection = computerPlay();
+        if (playerSelection.toLowerCase() === 'rock' || playerSelection.toLowerCase() === 'paper' || playerSelection.toLowerCase() === 'scissors'){
+            console.log(playerSelection);
+            console.log(computerSelection);
+            console.log(playRound(playerSelection, computerSelection));
+        } else {
+            console.log('rock paper scissors only man! You lose the round!');
+        }
+    }
+}
 
 function computerPlay() {
     let randomPlay = Math.floor((Math.random() * 10));
@@ -34,3 +46,5 @@ function playRound(playerSelection, computerSelection){
         return 'Aiko';
     }
 }
+
+game();
